@@ -1,0 +1,25 @@
+1.PLANNING-
+    New rails project including mysql setup
+    Setup database.yml
+    Migration file addition
+    seed file 
+    Setup controller,routes as per requirements(basics)
+    Add view files according to it
+    If any extra data reqired for any insights or any other end points add extra instance variables or add that data to existing instance variable
+    Add any other methods according to requirements and check for view compartability
+    Add test cases
+    Check the test cases
+
+
+
+
+2. AI INSTRUCTIONS AND PROMPTS-
+    For creation of seed file: 
+        1. Create a seed file to create 10000 employees which will include column values like full name, job title, country, salary and for full name use first_names.txt and last_names.txt by combining both and consider performance optimization as well.
+        2.This is fine but but it feels something odd as department is engineering and title is hr manager which feels wrong and name is indian name but country is germany. Resolve it by using a hash for department and job title, countries should allign with the names and salaries.
+        
+        
+        
+3. PERFORMANCE CONSIDERATION-
+    For seed - Add insert all to create all records at once instead of putting save or create everytime inside the loop
+    
