@@ -35,10 +35,15 @@ export default function SalaryManager() {
   const handleDelete = async (employeeId) => {
     if (confirm('Are you sure you want to delete this employee?')) {
       try {
+        // Get CSRF token
+        const csrfToken = document.querySelector('[name="csrf-token"]').getAttribute('content');
+        
         const response = await fetch(`/employees/${employeeId}`, {
           method: 'DELETE',
           headers: {
-            'X-CSRF-Token': document.querySelector('[name="csrf-token"]').getAttribute('content')
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': csrfToken,
+            'Accept': 'application/json'
           }
         });
 

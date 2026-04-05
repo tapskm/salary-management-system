@@ -193,7 +193,7 @@ class EmployeesController < ApplicationController
     
     respond_to do |format|
       format.html { redirect_to employees_url, notice: "Employee was successfully removed." }
-      format.json { head :no_content }
+      format.json { render json: { message: "Employee was successfully removed." }, status: :ok }
     end
   end
 
