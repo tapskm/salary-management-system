@@ -1,0 +1,32 @@
+<%= form_with(model: employee, local: true, class: "max-w-lg bg-white p-8 rounded shadow") do |f| %>
+  <div class="mb-4">
+    <%= f.label :full_name, class: "block text-gray-700 font-bold mb-2" %>
+    <%= f.text_field :full_name, class: "w-full border p-2 rounded", required: true %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :job_title, class: "block text-gray-700 font-bold mb-2" %>
+    <%= f.text_field :job_title, class: "w-full border p-2 rounded", required: true %>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 mb-4">
+    <div>
+      <%= f.label :country, class: "block text-gray-700 font-bold mb-2" %>
+      <%= f.text_field :country, class: "w-full border p-2 rounded", required: true %>
+    </div>
+    <div>
+      <%= f.label :salary, class: "block text-gray-700 font-bold mb-2" %>
+      <%= f.number_field :salary, class: "w-full border p-2 rounded", required: true %>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <%= f.label :department, class: "block text-gray-700 font-bold mb-2" %>
+    <%= f.text_field :department, class: "w-full border p-2 rounded" %>
+  </div>
+
+  <div class="flex items-center justify-between">
+    <%= f.submit "Save Employee", class: "bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 cursor-pointer" %>
+    <%= link_to 'Cancel', employees_path, class: "text-gray-600 hover:underline" %>
+  </div>
+<% end %>

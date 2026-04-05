@@ -13,7 +13,23 @@
     <%= javascript_include_tag "application", type: "module", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <%= link_to "HR Salary Manager", employees_path, class: "text-xl font-bold text-gray-800 hover:text-blue-600" %>
+          </div>
+          <div class="flex items-center space-x-4">
+            <%= link_to "Insights", insights_employees_path, class: "text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" %>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <main class="min-h-screen">
+      <%= yield %>
+    </main>
   </body>
 </html>

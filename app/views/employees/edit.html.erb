@@ -1,0 +1,11 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-gray-800">Edit Employee</h1>
+    
+    <%= render 'form', employee: @employee %>
+    
+    <div class="mt-6">
+      <%= link_to 'Back to Employee List', employees_path, class: 'text-blue-600 hover:underline' %>
+    </div>
+  </div>
+</div>
