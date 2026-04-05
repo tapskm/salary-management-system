@@ -21,8 +21,59 @@
         1. Create a react js setup for my monolithic rails application to integrate it directlyby esbuild.
         2. Add tailwind css build for better Ui and inbuilt css classes
         3. Configure react and tailwind for the project  
+    For adding more Insights: 
+        1. Add some more insights to the insight page like country wise and department wise salary analytics and total overview of the salary distribution
+    For test cases: 
+        1. Add model validations and business logic methods and user workflows
+        2. Create unit tests covering validations, scopes, and class methods
+        3. Add controller tests for all endpoints including API responses
+        4. Add performance tests for bulk operations and query optimization
+        5. Create system tests for React frontend functionality
+        7. Add test helpers and utilities for maintainable tests
         
         
 3. PERFORMANCE CONSIDERATION-
-    For seed - Add insert all to create all records at once instead of putting save or create everytime inside the loop
+    For seed - Add insert_all to create all records at once instead of putting save or create everytime inside the loop
+    For large set of employees in index and in insights as well- Adding pagination using kaminari
+    For testing - Added performance benchmarks and bulk operation tests
+
+
+4. TEST PROCEDURES ADDED-
+    Model Tests (test/models/employee_test.rb):
+        1 Validation tests for all required fields
+        2 Business logic tests (salary_category, formatted_salary)
+        3 Scope tests (by_country, by_department, salary ranges)
+        4 Class method tests (analytics methods)
+        5 Edge case and error handling tests
+        
+    Controller Tests (test/controllers/employees_controller_test.rb):
+        1 CRUD operations testing
+        2 JSON API response validation
+        3 Pagination functionality
+        4 Insights endpoint comprehensive testing
+        5 Error handling and security measures
+        6 Performance benchmarks
+        
+    Integration Tests (test/integration/employee_integration_test.rb):
+        1 Complete employee lifecycle workflows
+        2 Cross-endpoint data consistency
+        3 Concurrent request handling
+        4 Large dataset operations
+        5 Security and input sanitization
+        
+    Performance Tests (test/performance/employee_performance_test.rb): 
+        1 Bulk operation benchmarks
+        2 Query optimization validation
+        3 Pagination performance
+        4 Aggregation query efficiency
+        5 Concurrent read performance
+        6 Memory usage monitoring
+        
+    System Tests (test/system/employees_system_test.rb): ✓
+        1 React frontend functionality
+        2 Navigation and user interactions
+        3 Responsive design validation
+        4 JavaScript error detection
+        5 Browser compatibility
+        6 CSS and icon loading verification
     

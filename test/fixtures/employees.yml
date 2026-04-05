@@ -1,15 +1,50 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Test data for Employee model
 
-one:
-  full_name: MyString
-  job_title: MyString
-  country: MyString
-  salary: 1.5
-  department: MyString
+john_doe:
+  full_name: "John Doe"
+  job_title: "Software Engineer"
+  country: "United States"
+  salary: 85000.00
+  department: "Engineering"
 
-two:
-  full_name: MyString
-  job_title: MyString
-  country: MyString
-  salary: 1.5
-  department: MyString
+jane_smith:
+  full_name: "Jane Smith" 
+  job_title: "Product Manager"
+  country: "United States"
+  salary: 95000.00
+  department: "Product"
+
+raj_patel:
+  full_name: "Raj Patel"
+  job_title: "Senior Developer"
+  country: "India"
+  salary: 45000.00
+  department: "Engineering"
+
+maria_garcia:
+  full_name: "Maria Garcia"
+  job_title: "HR Manager"
+  country: "Spain"
+  salary: 60000.00
+  department: "Human Resources"
+
+hans_mueller:
+  full_name: "Hans Mueller"
+  job_title: "Data Scientist"
+  country: "Germany"
+  salary: 75000.00
+  department: "Data Science"
+
+low_salary_employee:
+  full_name: "Test User"
+  job_title: "Junior Developer"
+  country: "India"
+  salary: 25000.00
+  department: "Engineering"
+
+high_salary_employee:
+  full_name: "Senior Executive"
+  job_title: "VP Engineering"
+  country: "United States"
+  salary: 180000.00
+  department: "Engineering"
