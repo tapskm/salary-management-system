@@ -72,3 +72,5 @@ group :test do
 end
 
 gem "minitest", "~> 5.20"
+
+gem "rails-controller-testing", "~> 1.0"

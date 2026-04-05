@@ -134,7 +134,7 @@ class EmployeePerformanceTest < ActiveSupport::TestCase
     
     start_time = Time.current
     
-    10.threads do |i|
+    10.times do |i|
       threads << Thread.new do
         thread_results = []
         
