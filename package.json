@@ -2,6 +2,20 @@
   "name": "app",
   "private": true,
   "dependencies": {
-    "@hotwired/stimulus": "^3.2.2"
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.23",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "tailwindcss": "^4.2.2",
+    "concurrently": "^9.1.0"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/application.jsx --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets --loader:.jsx=jsx",
+    "build:css": "tailwindcss -i ./app/assets/tailwind/application.css -o ./app/assets/builds/application.css --watch",
+    "dev": "concurrently \"npm run build -- --watch\" \"npm run build:css\"",
+    "build:production": "esbuild app/javascript/application.jsx --bundle --minify --outdir=app/assets/builds --public-path=/assets --loader:.jsx=jsx && tailwindcss -i ./app/assets/tailwind/application.css -o ./app/assets/builds/application.css --minify"
   }
 }
